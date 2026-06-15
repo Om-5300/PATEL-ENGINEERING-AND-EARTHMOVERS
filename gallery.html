@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patel Engineering Project Gallery</title>
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -12,6 +14,7 @@
             box-sizing: border-box;
             color: #333;
         }
+
         h1 {
             text-align: center;
             margin-top: 20px;
@@ -21,7 +24,7 @@
             color: #444;
             animation: fadeIn 1s ease-in-out;
         }
-        
+
         .container {
             display: flex;
             flex-direction: column;
@@ -29,7 +32,7 @@
             gap: 40px;
             animation: slideIn 1s ease-in-out;
         }
-        
+
         .section {
             width: 100%;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -38,12 +41,12 @@
             background-color: #fff;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
-        
+
         .section:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
         }
-        
+
         .section h2 {
             text-align: center;
             padding: 15px;
@@ -55,37 +58,42 @@
             letter-spacing: 1px;
             border-bottom: 5px solid #3498db;
         }
-        
-        .image-gallery, .video-gallery {
+
+        .image-gallery,
+        .video-gallery {
             padding: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 20px;
         }
-        
-        .image-gallery img, .video-gallery video {
+
+        .image-gallery img,
+        .video-gallery video {
             width: 100%;
             height: 250px;
             object-fit: cover;
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
-        .image-gallery img:hover, .video-gallery video:hover {
+
+        .image-gallery img:hover,
+        .video-gallery video:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         @media (max-width: 1024px) {
             .container {
                 padding: 24px;
                 gap: 32px;
             }
+
             .image-gallery,
             .video-gallery {
                 grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
                 padding: 0;
             }
+
             .image-gallery img,
             .video-gallery video {
                 width: 100%;
@@ -94,6 +102,7 @@
                 aspect-ratio: 16/9;
                 object-fit: cover;
             }
+
             .section {
                 width: 100%;
                 margin: 0;
@@ -107,29 +116,36 @@
                 margin-top: 18px;
                 margin-bottom: 8px;
             }
+
             .container {
                 padding: 18px;
                 gap: 24px;
             }
+
             .section h2 {
                 font-size: 1.6rem;
                 padding: 12px;
             }
+
             .image-gallery,
             .video-gallery {
                 gap: 16px;
             }
+
             .image-gallery img,
             .video-gallery video {
                 min-height: 180px;
             }
+
             .gallery-header {
                 padding: 16px 18px 0;
             }
+
             .gallery-header .container {
                 flex-direction: column;
                 align-items: flex-start;
             }
+
             .back-link {
                 font-size: 0.95rem;
             }
@@ -139,75 +155,110 @@
             body {
                 font-size: 14px;
             }
+
             .container {
                 padding: 14px 12px;
                 gap: 18px;
             }
+
             h1 {
                 font-size: 1.6rem;
                 margin: 12px 0;
             }
+
             .section {
                 border-radius: 0;
                 box-shadow: none;
             }
+
             .section h2 {
                 font-size: 1.3rem;
                 padding: 10px;
             }
+
             .image-gallery,
             .video-gallery {
                 grid-template-columns: 1fr;
                 gap: 14px;
             }
+
             .image-gallery img,
             .video-gallery video {
                 min-height: 180px;
                 aspect-ratio: 16/9;
             }
+
             .gallery-header {
                 padding: 12px 12px 0;
             }
+
             .gallery-header .container {
                 gap: 0.75rem;
             }
+
             .back-link {
                 font-size: 0.95rem;
             }
         }
-        
-        
+
+
         /* Animation for fade-in and slide-in effects */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         @keyframes slideIn {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
+
         .gallery-header {
             padding: 20px 40px 0;
             background: #fff;
         }
+
         .gallery-header .container {
             display: flex;
             justify-content: flex-start;
             align-items: center;
             gap: 1rem;
         }
+
         .back-link {
             color: #2c3e50;
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
         }
+
         .back-link:hover {
             color: #5095df;
         }
     </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0GNFM6Q3H0"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0GNFM6Q3H0');
+</script>
+
 <body>
     <header class="gallery-header">
         <div class="container">
@@ -253,4 +304,5 @@
     </div>
 
 </body>
+
 </html>
